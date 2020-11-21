@@ -82,6 +82,10 @@
                     "path": "patches/sorcer-link.patch"
                 },
                 {
+                    "type": "patch",
+                    "path": "patches/sorcer-aarch64.patch"
+                },
+                {
                     "type": "file",
                     "path": "org.freedesktop.LinuxAudio.Plugins.Sorcer.metainfo.xml"
                 }
