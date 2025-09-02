@@ -2,9 +2,9 @@
     "id": "org.freedesktop.LinuxAudio.Plugins.Sorcer",
     "runtime": "org.freedesktop.LinuxAudio.BaseExtension",
     "runtime-version": "stable",
-    "sdk": "org.freedesktop.Sdk//24.08",
+    "sdk": "org.freedesktop.Sdk//25.08",
     "build-extension": true,
-    "branch": "24.08",
+    "branch": "25.08",
     "build-options": {
         "prefix": "/app/extensions/Plugins/Sorcer",
         "prepend-pkg-config-path": "/app/extensions/Plugins/Sorcer/lib/pkgconfig"
@@ -66,6 +66,9 @@
         {
             "name": "sorcer",
             "buildsystem": "cmake-ninja",
+            "config-opts": [
+                "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+            ],
             "post-install": [
                 "install -Dm644 org.freedesktop.LinuxAudio.Plugins.Sorcer.metainfo.xml -t ${FLATPAK_DEST}/share/metainfo"
             ],
